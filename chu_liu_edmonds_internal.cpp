@@ -20,7 +20,7 @@
 #include <limits>
 #include <iostream>
 #include <vector>
-#include "chu_liu_edmonds.h"
+#include "chu_liu_edmonds_internal.h"
 
 using namespace std;
 

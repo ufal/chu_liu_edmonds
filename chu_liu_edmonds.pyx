@@ -1,13 +1,10 @@
 # cython: language_level=3
-# distutils: language = c++
-# distutils: sources = chu_liu_edmonds.cpp
-# distutils: extra_compile_args = -std=c++11
 
 from libcpp.vector cimport vector
 from libcpp cimport bool as cbool
 from libc.math cimport isnan
 
-cdef extern from "chu_liu_edmonds.h":
+cdef extern from "chu_liu_edmonds_internal.h":
     cdef void c_chu_liu_edmonds(
             vector[cbool] *disabled,
             vector[vector[int]] *candidate_heads,
