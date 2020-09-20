@@ -18,7 +18,7 @@ Example usage:
 
 ```python
 import numpy as np
-from dependency_decoding import chu_liu_edmonds
+from ufal.chu_liu_edmonds import chu_liu_edmonds
 
 np.random.seed(42)
 score_matrix = np.random.rand(3, 4)
