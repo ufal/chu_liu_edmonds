@@ -1,3 +1,4 @@
+# cython: language_level=3
 # distutils: language = c++
 # distutils: sources = chu_liu_edmonds.cpp
 # distutils: extra_compile_args = -std=c++11
