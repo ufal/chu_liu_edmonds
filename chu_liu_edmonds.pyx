@@ -1,5 +1,7 @@
 # cython: language_level=3
 
+__version__ = "1.0.0"
+
 from libcpp.vector cimport vector
 from libcpp cimport bool as cbool
 from libc.math cimport isnan
@@ -11,7 +13,6 @@ cdef extern from "chu_liu_edmonds_internal.h":
             vector[vector[double]] *candidate_scores,
             vector[int] *heads,
             double *value);
-
 
 def chu_liu_edmonds(double[:,:] score_matrix):
     """

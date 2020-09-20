@@ -1832,6 +1832,7 @@ static const char __pyx_k_size[] = "size";
 static const char __pyx_k_step[] = "step";
 static const char __pyx_k_stop[] = "stop";
 static const char __pyx_k_test[] = "__test__";
+static const char __pyx_k_1_0_0[] = "1.0.0";
 static const char __pyx_k_ASCII[] = "ASCII";
 static const char __pyx_k_class[] = "__class__";
 static const char __pyx_k_dep_i[] = "dep_i";
@@ -1853,6 +1854,7 @@ static const char __pyx_k_unpack[] = "unpack";
 static const char __pyx_k_update[] = "update";
 static const char __pyx_k_fortran[] = "fortran";
 static const char __pyx_k_memview[] = "memview";
+static const char __pyx_k_version[] = "__version__";
 static const char __pyx_k_Ellipsis[] = "Ellipsis";
 static const char __pyx_k_disabled[] = "disabled";
 static const char __pyx_k_getstate[] = "__getstate__";
@@ -1914,6 +1916,7 @@ static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to conver
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension %d (got %d and %d)";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
+static PyObject *__pyx_kp_u_1_0_0;
 static PyObject *__pyx_n_s_ASCII;
 static PyObject *__pyx_kp_s_Buffer_view_does_not_expose_stri;
 static PyObject *__pyx_kp_s_Can_only_create_a_buffer_that_is;
@@ -2014,6 +2017,7 @@ static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
+static PyObject *__pyx_n_s_version;
 static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_score_matrix); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
@@ -2094,8 +2098,8 @@ static PyObject *__pyx_codeobj__20;
 static PyObject *__pyx_codeobj__27;
 /* Late includes */
 
-/* "chu_liu_edmonds.pyx":16
- * 
+/* "chu_liu_edmonds.pyx":17
+ *             double *value);
  * 
  * def chu_liu_edmonds(double[:,:] score_matrix):             # <<<<<<<<<<<<<<
  *     """
@@ -2115,7 +2119,7 @@ static PyObject *__pyx_pw_4ufal_15chu_liu_edmonds_1chu_liu_edmonds(PyObject *__p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("chu_liu_edmonds (wrapper)", 0);
   assert(__pyx_arg_score_matrix); {
-    __pyx_v_score_matrix = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_arg_score_matrix, PyBUF_WRITABLE); if (unlikely(!__pyx_v_score_matrix.memview)) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_score_matrix = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_arg_score_matrix, PyBUF_WRITABLE); if (unlikely(!__pyx_v_score_matrix.memview)) __PYX_ERR(0, 17, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2163,7 +2167,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("chu_liu_edmonds", 0);
 
-  /* "chu_liu_edmonds.pyx":25
+  /* "chu_liu_edmonds.pyx":26
  *     """
  *     # The size of the sentence includes the root at index 0
  *     cdef size_t sentence_len = len(score_matrix)             # <<<<<<<<<<<<<<
@@ -2173,7 +2177,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_score_matrix); 
   __pyx_v_sentence_len = __pyx_t_1;
 
-  /* "chu_liu_edmonds.pyx":28
+  /* "chu_liu_edmonds.pyx":29
  *     cdef vector[vector[int]] candidate_heads
  *     cdef vector[vector[double]] candidate_scores
  *     cdef vector[int] heads = vector[int](sentence_len, -1)             # <<<<<<<<<<<<<<
@@ -2184,11 +2188,11 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
     __pyx_t_2 = std::vector<int> (__pyx_v_sentence_len, -1);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 28, __pyx_L1_error)
+    __PYX_ERR(0, 29, __pyx_L1_error)
   }
   __pyx_v_heads = __pyx_t_2;
 
-  /* "chu_liu_edmonds.pyx":29
+  /* "chu_liu_edmonds.pyx":30
  *     cdef vector[vector[double]] candidate_scores
  *     cdef vector[int] heads = vector[int](sentence_len, -1)
  *     cdef vector[cbool] disabled = vector[cbool](sentence_len, <cbool> False)             # <<<<<<<<<<<<<<
@@ -2199,11 +2203,11 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
     __pyx_t_3 = std::vector<bool> (__pyx_v_sentence_len, ((bool)0));
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 29, __pyx_L1_error)
+    __PYX_ERR(0, 30, __pyx_L1_error)
   }
   __pyx_v_disabled = __pyx_t_3;
 
-  /* "chu_liu_edmonds.pyx":30
+  /* "chu_liu_edmonds.pyx":31
  *     cdef vector[int] heads = vector[int](sentence_len, -1)
  *     cdef vector[cbool] disabled = vector[cbool](sentence_len, <cbool> False)
  *     cdef double tree_score = 0             # <<<<<<<<<<<<<<
@@ -2212,7 +2216,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
  */
   __pyx_v_tree_score = 0.0;
 
-  /* "chu_liu_edmonds.pyx":32
+  /* "chu_liu_edmonds.pyx":33
  *     cdef double tree_score = 0
  * 
  *     candidate_scores.resize(sentence_len)             # <<<<<<<<<<<<<<
@@ -2223,10 +2227,10 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
     __pyx_v_candidate_scores.resize(__pyx_v_sentence_len);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 32, __pyx_L1_error)
+    __PYX_ERR(0, 33, __pyx_L1_error)
   }
 
-  /* "chu_liu_edmonds.pyx":33
+  /* "chu_liu_edmonds.pyx":34
  * 
  *     candidate_scores.resize(sentence_len)
  *     candidate_heads.resize(sentence_len)             # <<<<<<<<<<<<<<
@@ -2237,10 +2241,10 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
     __pyx_v_candidate_heads.resize(__pyx_v_sentence_len);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 33, __pyx_L1_error)
+    __PYX_ERR(0, 34, __pyx_L1_error)
   }
 
-  /* "chu_liu_edmonds.pyx":35
+  /* "chu_liu_edmonds.pyx":36
  *     candidate_heads.resize(sentence_len)
  * 
  *     assert score_matrix.shape[0] == score_matrix.shape[1], "Score matrix must be square"             # <<<<<<<<<<<<<<
@@ -2251,12 +2255,12 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
   if (unlikely(!Py_OptimizeFlag)) {
     if (unlikely(!(((__pyx_v_score_matrix.shape[0]) == (__pyx_v_score_matrix.shape[1])) != 0))) {
       PyErr_SetObject(PyExc_AssertionError, __pyx_kp_u_Score_matrix_must_be_square);
-      __PYX_ERR(0, 35, __pyx_L1_error)
+      __PYX_ERR(0, 36, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "chu_liu_edmonds.pyx":39
+  /* "chu_liu_edmonds.pyx":40
  *     cdef int dep_i, head_i
  *     cdef double edge_score
  *     for dep_i in range(1, score_matrix.shape[0]):             # <<<<<<<<<<<<<<
@@ -2268,7 +2272,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
   for (__pyx_t_6 = 1; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
     __pyx_v_dep_i = __pyx_t_6;
 
-    /* "chu_liu_edmonds.pyx":40
+    /* "chu_liu_edmonds.pyx":41
  *     cdef double edge_score
  *     for dep_i in range(1, score_matrix.shape[0]):
  *         for head_i in range(score_matrix.shape[1]):             # <<<<<<<<<<<<<<
@@ -2280,7 +2284,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
     for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
       __pyx_v_head_i = __pyx_t_9;
 
-      /* "chu_liu_edmonds.pyx":41
+      /* "chu_liu_edmonds.pyx":42
  *     for dep_i in range(1, score_matrix.shape[0]):
  *         for head_i in range(score_matrix.shape[1]):
  *             edge_score = score_matrix[dep_i, head_i]             # <<<<<<<<<<<<<<
@@ -2300,11 +2304,11 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
       } else if (unlikely(__pyx_t_11 >= __pyx_v_score_matrix.shape[1])) __pyx_t_12 = 1;
       if (unlikely(__pyx_t_12 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_12);
-        __PYX_ERR(0, 41, __pyx_L1_error)
+        __PYX_ERR(0, 42, __pyx_L1_error)
       }
       __pyx_v_edge_score = (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_score_matrix.data + __pyx_t_10 * __pyx_v_score_matrix.strides[0]) ) + __pyx_t_11 * __pyx_v_score_matrix.strides[1]) )));
 
-      /* "chu_liu_edmonds.pyx":42
+      /* "chu_liu_edmonds.pyx":43
  *         for head_i in range(score_matrix.shape[1]):
  *             edge_score = score_matrix[dep_i, head_i]
  *             if not isnan(edge_score):             # <<<<<<<<<<<<<<
@@ -2314,7 +2318,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
       __pyx_t_13 = ((!(isnan(__pyx_v_edge_score) != 0)) != 0);
       if (__pyx_t_13) {
 
-        /* "chu_liu_edmonds.pyx":43
+        /* "chu_liu_edmonds.pyx":44
  *             edge_score = score_matrix[dep_i, head_i]
  *             if not isnan(edge_score):
  *                 candidate_heads[dep_i].push_back(head_i)             # <<<<<<<<<<<<<<
@@ -2325,10 +2329,10 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
           (__pyx_v_candidate_heads[__pyx_v_dep_i]).push_back(__pyx_v_head_i);
         } catch(...) {
           __Pyx_CppExn2PyErr();
-          __PYX_ERR(0, 43, __pyx_L1_error)
+          __PYX_ERR(0, 44, __pyx_L1_error)
         }
 
-        /* "chu_liu_edmonds.pyx":44
+        /* "chu_liu_edmonds.pyx":45
  *             if not isnan(edge_score):
  *                 candidate_heads[dep_i].push_back(head_i)
  *                 candidate_scores[dep_i].push_back(edge_score)             # <<<<<<<<<<<<<<
@@ -2339,10 +2343,10 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
           (__pyx_v_candidate_scores[__pyx_v_dep_i]).push_back(__pyx_v_edge_score);
         } catch(...) {
           __Pyx_CppExn2PyErr();
-          __PYX_ERR(0, 44, __pyx_L1_error)
+          __PYX_ERR(0, 45, __pyx_L1_error)
         }
 
-        /* "chu_liu_edmonds.pyx":42
+        /* "chu_liu_edmonds.pyx":43
  *         for head_i in range(score_matrix.shape[1]):
  *             edge_score = score_matrix[dep_i, head_i]
  *             if not isnan(edge_score):             # <<<<<<<<<<<<<<
@@ -2353,7 +2357,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
     }
   }
 
-  /* "chu_liu_edmonds.pyx":47
+  /* "chu_liu_edmonds.pyx":48
  * 
  * 
  *     c_chu_liu_edmonds(disabled=&disabled, candidate_heads=&candidate_heads, candidate_scores=&candidate_scores,             # <<<<<<<<<<<<<<
@@ -2362,17 +2366,17 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
  */
   c_chu_liu_edmonds((&__pyx_v_disabled), (&__pyx_v_candidate_heads), (&__pyx_v_candidate_scores), (&__pyx_v_heads), (&__pyx_v_tree_score));
 
-  /* "chu_liu_edmonds.pyx":51
+  /* "chu_liu_edmonds.pyx":52
  * 
  *     # Convert heads format
  *     return heads, tree_score             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_14 = __pyx_convert_vector_to_py_int(__pyx_v_heads); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_t_14 = __pyx_convert_vector_to_py_int(__pyx_v_heads); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_tree_score); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_tree_score); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
   __Pyx_GIVEREF(__pyx_t_14);
   PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_14);
@@ -2384,8 +2388,8 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
   __pyx_t_16 = 0;
   goto __pyx_L0;
 
-  /* "chu_liu_edmonds.pyx":16
- * 
+  /* "chu_liu_edmonds.pyx":17
+ *             double *value);
  * 
  * def chu_liu_edmonds(double[:,:] score_matrix):             # <<<<<<<<<<<<<<
  *     """
@@ -16250,6 +16254,7 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
+  {&__pyx_kp_u_1_0_0, __pyx_k_1_0_0, sizeof(__pyx_k_1_0_0), 0, 1, 0, 0},
   {&__pyx_n_s_ASCII, __pyx_k_ASCII, sizeof(__pyx_k_ASCII), 0, 0, 1, 1},
   {&__pyx_kp_s_Buffer_view_does_not_expose_stri, __pyx_k_Buffer_view_does_not_expose_stri, sizeof(__pyx_k_Buffer_view_does_not_expose_stri), 0, 0, 1, 0},
   {&__pyx_kp_s_Can_only_create_a_buffer_that_is, __pyx_k_Can_only_create_a_buffer_that_is, sizeof(__pyx_k_Can_only_create_a_buffer_that_is), 0, 0, 1, 0},
@@ -16350,10 +16355,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_unable_to_allocate_shape_and_str, __pyx_k_unable_to_allocate_shape_and_str, sizeof(__pyx_k_unable_to_allocate_shape_and_str), 0, 0, 1, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
+  {&__pyx_n_s_version, __pyx_k_version, sizeof(__pyx_k_version), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 40, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 151, __pyx_L1_error)
@@ -16562,17 +16568,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "chu_liu_edmonds.pyx":16
- * 
+  /* "chu_liu_edmonds.pyx":17
+ *             double *value);
  * 
  * def chu_liu_edmonds(double[:,:] score_matrix):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_tuple__19 = PyTuple_Pack(11, __pyx_n_s_score_matrix, __pyx_n_s_score_matrix, __pyx_n_s_sentence_len, __pyx_n_s_candidate_heads, __pyx_n_s_candidate_scores, __pyx_n_s_heads, __pyx_n_s_disabled, __pyx_n_s_tree_score, __pyx_n_s_dep_i, __pyx_n_s_head_i, __pyx_n_s_edge_score); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(11, __pyx_n_s_score_matrix, __pyx_n_s_score_matrix, __pyx_n_s_sentence_len, __pyx_n_s_candidate_heads, __pyx_n_s_candidate_scores, __pyx_n_s_heads, __pyx_n_s_disabled, __pyx_n_s_tree_score, __pyx_n_s_dep_i, __pyx_n_s_head_i, __pyx_n_s_edge_score); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_chu_liu_edmonds_pyx, __pyx_n_s_chu_liu_edmonds, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_chu_liu_edmonds_pyx, __pyx_n_s_chu_liu_edmonds, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 17, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -16985,22 +16991,31 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "chu_liu_edmonds.pyx":16
+  /* "chu_liu_edmonds.pyx":3
+ * # cython: language_level=3
  * 
+ * __version__ = "1.0.0"             # <<<<<<<<<<<<<<
+ * 
+ * from libcpp.vector cimport vector
+ */
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_version, __pyx_kp_u_1_0_0) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
+
+  /* "chu_liu_edmonds.pyx":17
+ *             double *value);
  * 
  * def chu_liu_edmonds(double[:,:] score_matrix):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_4ufal_15chu_liu_edmonds_1chu_liu_edmonds, NULL, __pyx_n_s_ufal_chu_liu_edmonds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_4ufal_15chu_liu_edmonds_1chu_liu_edmonds, NULL, __pyx_n_s_ufal_chu_liu_edmonds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_chu_liu_edmonds, __pyx_t_1) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_chu_liu_edmonds, __pyx_t_1) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "chu_liu_edmonds.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * 
- * from libcpp.vector cimport vector
+ * __version__ = "1.0.0"
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
