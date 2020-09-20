@@ -34,7 +34,7 @@ void c_chu_liu_edmonds(
         vector<int> *heads,
         double *value) {
     // Original number of nodes (including the root).
-    size_t length = disabled->size();
+    int length = int(disabled->size());
 
     // Pick the best incoming arc for each node.
     heads->resize(length);
@@ -42,7 +42,7 @@ void c_chu_liu_edmonds(
     for (int m = 1; m < length; ++m) {
         if ((*disabled)[m]) continue;
         int best = -1;
-        for (int k = 0; k < (*candidate_heads)[m].size(); ++k) {
+        for (int k = 0; k < int((*candidate_heads)[m].size()); ++k) {
             if (best < 0 ||
                 (*candidate_scores)[m][k] >(*candidate_scores)[m][best]) {
                 best = k;
@@ -102,7 +102,7 @@ void c_chu_liu_edmonds(
     double cycle_score = 0.0;
     vector<bool> in_cycle(length, false);
     int representative = cycle[0];
-    for (int k = 0; k < cycle.size(); ++k) {
+    for (int k = 0; k < int(cycle.size()); ++k) {
         int m = cycle[k];
         in_cycle[m] = true;
         cycle_score += best_scores[m];
@@ -119,7 +119,7 @@ void c_chu_liu_edmonds(
         // If the list of candidate parents of m is shorter than the length of
         // the cycle, use that. Otherwise, loop through the cycle.
         int best = -1;
-        for (int k = 0; k < (*candidate_heads)[m].size(); ++k) {
+        for (int k = 0; k < int((*candidate_heads)[m].size()); ++k) {
             if (!in_cycle[(*candidate_heads)[m][k]]) continue;
             if (best < 0 || (*candidate_scores)[m][k] > best_score) {
                 best = k;
@@ -131,7 +131,7 @@ void c_chu_liu_edmonds(
 
         // Reconstruct the list of candidate heads for this m.
         int l = 0;
-        for (int k = 0; k < (*candidate_heads)[m].size(); ++k) {
+        for (int k = 0; k < int((*candidate_heads)[m].size()); ++k) {
             int h = (*candidate_heads)[m][k];
             double score = (*candidate_scores)[m][k];
             if (!in_cycle[h]) {
@@ -155,9 +155,9 @@ void c_chu_liu_edmonds(
 
     vector<double> best_scores_cycle(length);
     // Loop through the cycle.
-    for (int k = 0; k < cycle.size(); ++k) {
+    for (int k = 0; k < int(cycle.size()); ++k) {
         int m = cycle[k];
-        for (int l = 0; l < (*candidate_heads)[m].size(); ++l) {
+        for (int l = 0; l < int((*candidate_heads)[m].size()); ++l) {
             // Get heads out of the cycle.
             int h = (*candidate_heads)[m][l];
             if (in_cycle[h]) continue;
@@ -202,7 +202,7 @@ void c_chu_liu_edmonds(
             (*heads)[m] = best_heads_cycle[m];
         }
     }
-    for (int k = 0; k < cycle.size(); ++k) {
+    for (int k = 0; k < int(cycle.size()); ++k) {
         int m = cycle[k];
         (*disabled)[m] = false;
     }
