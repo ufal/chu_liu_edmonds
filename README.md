@@ -15,7 +15,6 @@ In other words, a row gives the scores for the different heads of a dependent.
 A `np.nan` cell value informs the algorithm to skip the edge.
 
 Example usage:
-
 ```python
 import numpy as np
 from ufal.chu_liu_edmonds import chu_liu_edmonds

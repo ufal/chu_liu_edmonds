@@ -1,39 +1,32 @@
-import distutils.core
 import os
+import setuptools
 import sys
 
 with open('README.md') as file:
     readme = file.read()
-
-with_cython = os.getenv("WITH_CYTHON") is not None
 
 extra_link_args = []
 extra_compile_args = ['-std=c++11', '-w']
 if sys.platform == "darwin":
     extra_compile_args += ['-stdlib=libc++']
     extra_link_args += ['-stdlib=libc++']
-extension_modules = [distutils.core.Extension(
-    'ufal.chu_liu_edmonds',
-    ['chu_liu_edmonds_internal.cpp', 'chu_liu_edmonds.' + ('pyx' if with_cython else 'cpp')],
-    language = 'c++',
-    extra_compile_args = extra_compile_args,
-    extra_link_args = extra_link_args
-)]
-if with_cython:
-    import Cython.Build
-    extension_modules = Cython.Build.cythonize(extension_modules)
 
-distutils.core.setup(
+setuptools.setup(
     name             = 'ufal.chu_liu_edmonds',
     version          = '0.9.0',
     description      = 'Bindings to Chu-Liu-Edmonds algorithm from TurboParser',
-    long_description = readme,
+    long_description = readme, long_description_content_type = "text/markdown",
     author           = 'Milan Straka',
     author_email     = 'straka@ufal.mff.cuni.cz',
-    url              = 'https://github/ufal/chu_liu_edmonds',
+    url              = 'https://github.com/ufal/chu_liu_edmonds',
     license          = 'GPLv3',
     packages         = ['ufal'],
-    ext_modules      = extension_modules,
+    ext_modules      = [setuptools.Extension(
+        'ufal.chu_liu_edmonds',
+        ['chu_liu_edmonds.pyx', 'chu_liu_edmonds_internal.cpp'],
+        language = 'c++',
+        extra_compile_args = extra_compile_args,
+        extra_link_args = extra_link_args)],
     classifiers      = [
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',

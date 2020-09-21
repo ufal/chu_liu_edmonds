@@ -1,5 +1,4 @@
 include CHANGES
 include LICENSE
 include README.md
-graft test
-graft ufal
+include chu_liu_edmonds.cpp
