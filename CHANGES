@@ -1,4 +1,7 @@
 Revision history for ufal.chu_liu_edmonds
 
+1.0.1 [21 Sep 2020]
+      Include the forgotten header chu_liu_edmonds_internal.h.
+
 1.0.0 [21 Sep 2020]
       First release.
