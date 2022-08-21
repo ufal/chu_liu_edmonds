@@ -22,7 +22,7 @@ setuptools.setup(
     license          = 'GPLv3',
     packages         = ['ufal'],
     ext_modules      = [setuptools.Extension(
-        'ufal.chu_liu_edmonds',
+        'ufal.chu_liu_edmonds.__init__',
         ['chu_liu_edmonds.pyx', 'chu_liu_edmonds_internal.cpp'],
         language = 'c++',
         extra_compile_args = extra_compile_args,
