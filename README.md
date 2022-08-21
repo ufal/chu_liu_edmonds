@@ -31,3 +31,10 @@ Binary wheels of the package are provided, just run
 ```
 pip install ufal.chu_liu_edmonds
 ```
+
+## Updating the Cython-generated Module
+
+To update the Cython-generated module, run
+```
+cython --module-name ufal.chu_liu_edmonds chu_liu_edmonds.pyx -o chu_liu_edmonds.cpp
+```
