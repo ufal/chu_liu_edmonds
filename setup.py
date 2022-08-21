@@ -10,6 +10,8 @@ extra_compile_args = ['-std=c++11', '-w']
 if sys.platform == "darwin":
     extra_compile_args += ['-stdlib=libc++']
     extra_link_args += ['-stdlib=libc++']
+if sys.platform == "win32":
+    extra_compile_args += ['/d2FH4-']
 
 setuptools.setup(
     name             = 'ufal.chu_liu_edmonds',
