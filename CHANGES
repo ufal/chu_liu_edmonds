@@ -1,5 +1,7 @@
 Revision history for ufal.chu_liu_edmonds
 
+1.0.3-dev
+
 1.0.2 [21 Aug 2022]
       Update the Cython-generated module.
       Move the module to ufal.chu_liu_edmonds package.

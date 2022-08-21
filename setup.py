@@ -13,7 +13,7 @@ if sys.platform == "darwin":
 
 setuptools.setup(
     name             = 'ufal.chu_liu_edmonds',
-    version          = '1.0.2',
+    version          = '1.0.3-dev',
     description      = 'Bindings to Chu-Liu-Edmonds algorithm from TurboParser',
     long_description = readme, long_description_content_type = "text/markdown",
     author           = 'Milan Straka',
