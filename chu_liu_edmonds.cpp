@@ -738,8 +738,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__ufal__chu_liu_edmonds
-#define __PYX_HAVE_API__ufal__chu_liu_edmonds
+#define __PYX_HAVE__ufal__chu_liu_edmonds___chu_liu_edmonds
+#define __PYX_HAVE_API__ufal__chu_liu_edmonds___chu_liu_edmonds
 /* Early includes */
 #include "ios"
 #include "new"
@@ -1894,7 +1894,7 @@ static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memo
 
 /* Module declarations from 'libc.math' */
 
-/* Module declarations from 'ufal.chu_liu_edmonds' */
+/* Module declarations from 'ufal.chu_liu_edmonds._chu_liu_edmonds' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1941,11 +1941,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "ufal.chu_liu_edmonds"
-extern int __pyx_module_is_main_ufal__chu_liu_edmonds;
-int __pyx_module_is_main_ufal__chu_liu_edmonds = 0;
+#define __Pyx_MODULE_NAME "ufal.chu_liu_edmonds._chu_liu_edmonds"
+extern int __pyx_module_is_main_ufal__chu_liu_edmonds___chu_liu_edmonds;
+int __pyx_module_is_main_ufal__chu_liu_edmonds___chu_liu_edmonds = 0;
 
-/* Implementation of 'ufal.chu_liu_edmonds' */
+/* Implementation of 'ufal.chu_liu_edmonds._chu_liu_edmonds' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
@@ -2030,7 +2030,6 @@ static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
 static const char __pyx_k_chu_liu_edmonds_pyx[] = "chu_liu_edmonds.pyx";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
-static const char __pyx_k_ufal_chu_liu_edmonds[] = "ufal.chu_liu_edmonds";
 static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
@@ -2053,6 +2052,7 @@ static const char __pyx_k_Out_of_bounds_on_buffer_access_a[] = "Out of bounds on
 static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to convert item to object";
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension %d (got %d and %d)";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
+static const char __pyx_k_ufal_chu_liu_edmonds__chu_liu_ed[] = "ufal.chu_liu_edmonds._chu_liu_edmonds";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
 static PyObject *__pyx_kp_u_1_0_2;
 static PyObject *__pyx_n_s_ASCII;
@@ -2150,13 +2150,13 @@ static PyObject *__pyx_kp_s_stringsource;
 static PyObject *__pyx_n_s_struct;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_tree_score;
-static PyObject *__pyx_n_s_ufal_chu_liu_edmonds;
+static PyObject *__pyx_n_s_ufal_chu_liu_edmonds__chu_liu_ed;
 static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_version;
-static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_score_matrix); /* proto */
+static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_score_matrix); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2248,10 +2248,10 @@ static PyObject *__pyx_codeobj__28;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4ufal_15chu_liu_edmonds_1chu_liu_edmonds(PyObject *__pyx_self, PyObject *__pyx_arg_score_matrix); /*proto*/
-static char __pyx_doc_4ufal_15chu_liu_edmonds_chu_liu_edmonds[] = "\n\n    :param score_matrix: an N by N matrix where the i,j-th cell is the score\n        of i having j as a head. Index 0 is the artificial root node.\n    :param tol: Ignore scores that are closer than tol to zero.\n    :return:\n    ";
-static PyMethodDef __pyx_mdef_4ufal_15chu_liu_edmonds_1chu_liu_edmonds = {"chu_liu_edmonds", (PyCFunction)__pyx_pw_4ufal_15chu_liu_edmonds_1chu_liu_edmonds, METH_O, __pyx_doc_4ufal_15chu_liu_edmonds_chu_liu_edmonds};
-static PyObject *__pyx_pw_4ufal_15chu_liu_edmonds_1chu_liu_edmonds(PyObject *__pyx_self, PyObject *__pyx_arg_score_matrix) {
+static PyObject *__pyx_pw_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_1chu_liu_edmonds(PyObject *__pyx_self, PyObject *__pyx_arg_score_matrix); /*proto*/
+static char __pyx_doc_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_chu_liu_edmonds[] = "\n\n    :param score_matrix: an N by N matrix where the i,j-th cell is the score\n        of i having j as a head. Index 0 is the artificial root node.\n    :param tol: Ignore scores that are closer than tol to zero.\n    :return:\n    ";
+static PyMethodDef __pyx_mdef_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_1chu_liu_edmonds = {"chu_liu_edmonds", (PyCFunction)__pyx_pw_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_1chu_liu_edmonds, METH_O, __pyx_doc_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_chu_liu_edmonds};
+static PyObject *__pyx_pw_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_1chu_liu_edmonds(PyObject *__pyx_self, PyObject *__pyx_arg_score_matrix) {
   __Pyx_memviewslice __pyx_v_score_matrix = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2264,18 +2264,18 @@ static PyObject *__pyx_pw_4ufal_15chu_liu_edmonds_1chu_liu_edmonds(PyObject *__p
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ufal.chu_liu_edmonds.chu_liu_edmonds", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ufal.chu_liu_edmonds._chu_liu_edmonds.chu_liu_edmonds", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(__pyx_self, __pyx_v_score_matrix);
+  __pyx_r = __pyx_pf_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_chu_liu_edmonds(__pyx_self, __pyx_v_score_matrix);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_score_matrix) {
+static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_score_matrix) {
   size_t __pyx_v_sentence_len;
   std::vector<std::vector<int> >  __pyx_v_candidate_heads;
   std::vector<std::vector<double> >  __pyx_v_candidate_scores;
@@ -2542,7 +2542,7 @@ static PyObject *__pyx_pf_4ufal_15chu_liu_edmonds_chu_liu_edmonds(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("ufal.chu_liu_edmonds.chu_liu_edmonds", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ufal.chu_liu_edmonds._chu_liu_edmonds.chu_liu_edmonds", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_score_matrix, 1);
@@ -15779,7 +15779,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ufal.chu_liu_edmonds.array", /*tp_name*/
+  "ufal.chu_liu_edmonds._chu_liu_edmonds.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -15901,7 +15901,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ufal.chu_liu_edmonds.Enum", /*tp_name*/
+  "ufal.chu_liu_edmonds._chu_liu_edmonds.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -16165,7 +16165,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ufal.chu_liu_edmonds.memoryview", /*tp_name*/
+  "ufal.chu_liu_edmonds._chu_liu_edmonds.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -16306,7 +16306,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ufal.chu_liu_edmonds._memoryviewslice", /*tp_name*/
+  "ufal.chu_liu_edmonds._chu_liu_edmonds._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -16391,17 +16391,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_chu_liu_edmonds(PyObject* module); /*proto*/
+static int __pyx_pymod_exec__chu_liu_edmonds(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_chu_liu_edmonds},
+  {Py_mod_exec, (void*)__pyx_pymod_exec__chu_liu_edmonds},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "chu_liu_edmonds",
+    "_chu_liu_edmonds",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -16526,7 +16526,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_struct, __pyx_k_struct, sizeof(__pyx_k_struct), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_tree_score, __pyx_k_tree_score, sizeof(__pyx_k_tree_score), 0, 0, 1, 1},
-  {&__pyx_n_s_ufal_chu_liu_edmonds, __pyx_k_ufal_chu_liu_edmonds, sizeof(__pyx_k_ufal_chu_liu_edmonds), 0, 0, 1, 1},
+  {&__pyx_n_s_ufal_chu_liu_edmonds__chu_liu_ed, __pyx_k_ufal_chu_liu_edmonds__chu_liu_ed, sizeof(__pyx_k_ufal_chu_liu_edmonds__chu_liu_ed), 0, 0, 1, 1},
   {&__pyx_kp_s_unable_to_allocate_array_data, __pyx_k_unable_to_allocate_array_data, sizeof(__pyx_k_unable_to_allocate_array_data), 0, 0, 1, 0},
   {&__pyx_kp_s_unable_to_allocate_shape_and_str, __pyx_k_unable_to_allocate_shape_and_str, sizeof(__pyx_k_unable_to_allocate_shape_and_str), 0, 0, 1, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
@@ -16988,11 +16988,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initchu_liu_edmonds(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initchu_liu_edmonds(void)
+__Pyx_PyMODINIT_FUNC init_chu_liu_edmonds(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC init_chu_liu_edmonds(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_chu_liu_edmonds(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_chu_liu_edmonds(void)
+__Pyx_PyMODINIT_FUNC PyInit__chu_liu_edmonds(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit__chu_liu_edmonds(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -17059,7 +17059,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_chu_liu_edmonds(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec__chu_liu_edmonds(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -17072,7 +17072,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_chu_liu_edmonds(PyObject *__pyx_py
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'chu_liu_edmonds' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module '_chu_liu_edmonds' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -17087,7 +17087,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_chu_liu_edmonds(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit__chu_liu_edmonds(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -17124,7 +17124,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("chu_liu_edmonds", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("_chu_liu_edmonds", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -17142,14 +17142,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_ufal__chu_liu_edmonds) {
+  if (__pyx_module_is_main_ufal__chu_liu_edmonds___chu_liu_edmonds) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "ufal.chu_liu_edmonds")) {
-      if (unlikely(PyDict_SetItemString(modules, "ufal.chu_liu_edmonds", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "ufal.chu_liu_edmonds._chu_liu_edmonds")) {
+      if (unlikely(PyDict_SetItemString(modules, "ufal.chu_liu_edmonds._chu_liu_edmonds", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -17186,7 +17186,7 @@ if (!__Pyx_RefNanny) {
  *     """
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_4ufal_15chu_liu_edmonds_1chu_liu_edmonds, NULL, __pyx_n_s_ufal_chu_liu_edmonds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_4ufal_15chu_liu_edmonds_16_chu_liu_edmonds_1chu_liu_edmonds, NULL, __pyx_n_s_ufal_chu_liu_edmonds__chu_liu_ed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_chu_liu_edmonds, __pyx_t_1) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -17361,11 +17361,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init ufal.chu_liu_edmonds", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init ufal.chu_liu_edmonds._chu_liu_edmonds", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init ufal.chu_liu_edmonds");
+    PyErr_SetString(PyExc_ImportError, "init ufal.chu_liu_edmonds._chu_liu_edmonds");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

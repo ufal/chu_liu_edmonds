@@ -36,5 +36,5 @@ pip install ufal.chu_liu_edmonds
 
 To update the Cython-generated module, run
 ```
-cython --module-name ufal.chu_liu_edmonds chu_liu_edmonds.pyx -o chu_liu_edmonds.cpp
+cython --module-name ufal.chu_liu_edmonds._chu_liu_edmonds chu_liu_edmonds.pyx -o chu_liu_edmonds.cpp
 ```

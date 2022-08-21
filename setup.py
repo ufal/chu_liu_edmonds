@@ -10,8 +10,6 @@ extra_compile_args = ['-std=c++11', '-w']
 if sys.platform == "darwin":
     extra_compile_args += ['-stdlib=libc++']
     extra_link_args += ['-stdlib=libc++']
-if sys.platform == "win32":
-    extra_compile_args += ['/d2FH4-']
 
 setuptools.setup(
     name             = 'ufal.chu_liu_edmonds',
@@ -22,9 +20,9 @@ setuptools.setup(
     author_email     = 'straka@ufal.mff.cuni.cz',
     url              = 'https://github.com/ufal/chu_liu_edmonds',
     license          = 'GPLv3',
-    packages         = ['ufal'],
+    packages         = ['ufal', 'ufal.chu_liu_edmonds'],
     ext_modules      = [setuptools.Extension(
-        'ufal.chu_liu_edmonds.__init__',
+        'ufal.chu_liu_edmonds._chu_liu_edmonds',
         ['chu_liu_edmonds.pyx', 'chu_liu_edmonds_internal.cpp'],
         language = 'c++',
         extra_compile_args = extra_compile_args,
