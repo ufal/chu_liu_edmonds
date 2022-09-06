@@ -7,9 +7,9 @@ The original package was made by https://github.com/andersjo/dependency_decoding
 
 ## Documentation
 
-The package provides a function `chu_liu_edmonds` which accepts a _N×N_ score
-matrix as argument, where _N_ is the sentence length, including the artificial
-root node. The _(i,j)_-th cell is the score for the edge _j→i_.
+The package provides a function `chu_liu_edmonds`, which accepts an _N×N_ score
+matrix as argument, where _N_ is the sentence length including the artificial
+root node, which has index 0. The _(i,j)_-th cell is the score for the edge _j→i_.
 In other words, a row gives the scores for the different heads of a dependent.
 
 A `np.nan` cell value informs the algorithm to skip the edge.
