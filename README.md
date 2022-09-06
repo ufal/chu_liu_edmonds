@@ -20,7 +20,7 @@ import numpy as np
 from ufal.chu_liu_edmonds import chu_liu_edmonds
 
 np.random.seed(42)
-score_matrix = np.random.rand(3, 4)
+score_matrix = np.random.rand(3, 3)
 heads, tree_score = chu_liu_edmonds(score_matrix)
 print(heads, tree_score)
 ```
