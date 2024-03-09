@@ -1,5 +1,8 @@
 Revision history for ufal.chu_liu_edmonds
 
+1.0.4-dev
+
+
 1.0.3 [9 Mar 2023]
       Fix example matrix size in the README.
       Add support for Python 3.12.
