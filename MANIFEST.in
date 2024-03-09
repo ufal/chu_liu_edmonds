@@ -5,3 +5,4 @@ include chu_liu_edmonds.cpp
 include chu_liu_edmonds.pyx
 include chu_liu_edmonds_internal.cpp
 include chu_liu_edmonds_internal.h
+graft tests

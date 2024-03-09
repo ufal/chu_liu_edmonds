@@ -1,6 +1,6 @@
 # cython: language_level=3
 
-__version__ = "1.0.3-dev"
+__version__ = "1.0.3"
 
 from libcpp.vector cimport vector
 from libcpp cimport bool as cbool
